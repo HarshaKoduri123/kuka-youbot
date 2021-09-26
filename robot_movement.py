@@ -214,15 +214,3 @@ if __name__ == '__main__':
                                                      dt), axis = 0)
 
     
-    utils.writeCSV(ref_trajectories, "overshoot/overshoot_gripper_trajectory.csv")
-    print("Done: gripper_trajectory.csv")        
-    utils.writeCSV(curr_state, "overshoot/overshoot_CoppeliaSim.csv")
-    print("Done: configurations.csv")
-    utils.writeCSV(X_errs, "overshoot/X_err_overshoot.csv")
-    print("Writing error plot data")
-    #Plotting the graph for the error
-    plt.plot(range(len(ref_trajectories)),X_errs)
-    plt.savefig('overshoot/X_err_overshoot.png')
-    print("Done")
-    plt.show()
-    
